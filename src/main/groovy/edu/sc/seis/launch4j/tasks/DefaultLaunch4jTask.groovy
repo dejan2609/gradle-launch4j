@@ -792,7 +792,7 @@ abstract class DefaultLaunch4jTask extends DefaultTask implements Launch4jConfig
         if (!jar) {
             if (project.plugins.hasPlugin('java')) {
                 def jarTask = project.tasks[JavaPlugin.JAR_TASK_NAME] as Jar
-                jar = "${libraryDir}/${jarTask.archiveName}"
+                jar = "${libraryDir}/${jarTask.archiveFileName}"
             } else {
                 jar = ""
             }

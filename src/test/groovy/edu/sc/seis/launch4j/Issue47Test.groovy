@@ -38,7 +38,7 @@ class Issue47Test extends FunctionalSpecification {
         File sourceFile = new File(testProjectDir.newFolder('src', 'main', 'java'), 'Main.java')
         sourceFile << """
             package com.test.app;
-            
+
             public class Main {
                 public static void main(String[] args) {
                     System.out.println("Hello World!");
@@ -81,7 +81,7 @@ class Issue47Test extends FunctionalSpecification {
             launch4j {
                 outfile = 'test.exe'
                 copyConfigurable = project.tasks.shadowJar.outputs.files
-                jar = "lib/" + project.tasks.shadowJar.archiveName
+                jar = "lib/" + project.tasks.shadowJar.archiveFileName
             }
         """
 

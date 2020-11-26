@@ -667,7 +667,7 @@ class Launch4jPluginExtensionTest extends FunctionalSpecification {
             launch4j {
                 outfile = 'test.exe'
                 copyConfigurable = project.tasks.shadowJar.outputs.files
-                jar = "lib/" + project.tasks.shadowJar.archiveName
+                jar = "lib/" + project.tasks.shadowJar.archiveFileName
             }
         """
 
@@ -734,7 +734,7 @@ class Launch4jPluginExtensionTest extends FunctionalSpecification {
             launch4j {
                 outfile = 'test.exe'
                 copyConfigurable = project.tasks.shadowJar.outputs.files
-                jar = "lib/" + project.tasks.shadowJar.archiveName
+                jar = "lib/" + project.tasks.shadowJar.archiveFileName
             }
         """
 

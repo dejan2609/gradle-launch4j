@@ -41,7 +41,7 @@ class Issue47Gradle4Test extends FunctionalSpecification {
                 mainTestClassName = 'com.test.app.Main'
             }
 
-            
+
             jar {
                 manifest {
                     attributes 'Main-Class': mainTestClassName
@@ -55,14 +55,14 @@ class Issue47Gradle4Test extends FunctionalSpecification {
                     attributes 'Main-Class': mainTestClassName
                 }
             }
-            
+
             fatJarPrepareFiles.dependsOn jar
-            
+
             launch4j {
                 outfile = 'test.exe'
                 mainClassName = mainTestClassName
                 copyConfigurable = project.tasks.fatJar.outputs.files
-                jar = "lib/" + project.tasks.fatJar.archiveName
+                jar = "lib/" + project.tasks.fatJar.archiveFileName
             }
         """
 

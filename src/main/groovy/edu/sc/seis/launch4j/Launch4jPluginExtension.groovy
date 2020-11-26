@@ -153,7 +153,7 @@ class Launch4jPluginExtension implements Launch4jConfiguration {
         if (!jar) {
             if (project.plugins.hasPlugin('java')) {
                 def jarTask = project.tasks.getByName(JavaPlugin.JAR_TASK_NAME) as Jar
-                jar = "${libraryDir}/${jarTask.archiveName}"
+                jar = "${libraryDir}/${jarTask.archiveFileName}"
             } else {
                 jar = ""
             }
